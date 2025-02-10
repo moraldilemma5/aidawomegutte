@@ -1,0 +1,81 @@
+/* ==========================================
+    1. 画像の保存防止対策
+========================================== */
+
+/* 画像のドラッグ & ドロップ禁止 */
+img {
+    pointer-events: none;      /* クリック無効 */
+    -webkit-user-drag: none;   /* Safari対応 */
+    user-drag: none;
+    -webkit-touch-callout: none; /* iOSでの画像保存メニュー防止 */
+}
+
+/* 画像を右クリック禁止（要JS併用） */
+img::selection {
+    background: transparent; /* 選択時の背景色を透明に */
+}
+
+/* ==========================================
+    2. 画像のスタイル設定（デザイン調整用）
+========================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px; /* 角丸デザイン */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+}
+
+/* ==========================================
+    3. コピー防止（テキストの選択禁止）
+========================================== */
+body, p, h1, h2, h3, h4, h5, h6 {
+    -webkit-user-select: none; /* Webkit (Chrome, Safari, Edge) */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;         /* 標準 */
+}
+
+/* ただし、リンクの選択を許可 */
+a, input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* ==========================================
+　  4. 基本レイアウト（全体のデザイン調整）
+========================================== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* コンテンツエリアのデザイン */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+　  5. フッターのデザイン
+========================================== */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
