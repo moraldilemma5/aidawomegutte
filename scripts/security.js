@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageElement = document.getElementById("protectedImage");
     if (imageElement) {
         const encodedURL = "aW1hZ2VzL0thd2Fpc2FuX3dvcmsucG5nCg==";
-        imageElement.src = atob(encodedURL);
+        const decodedURL = decodeURIComponent(escape(atob(encodedURL)));
+        setTimeout(() => {
+            imageElement.src = decodedURL;
+        }, 100);
     }
 
     /**
