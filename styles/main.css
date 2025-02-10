@@ -7,7 +7,12 @@ img {
     pointer-events: none;      /* クリック無効 */
     -webkit-user-drag: none;   /* Safari対応 */
     user-drag: none;
-    -webkit-touch-callout: none; /* iOSでの画像保存メニュー防止 */
+    -webkit-touch-callout: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 /* 画像を右クリック禁止（要JS併用） */
