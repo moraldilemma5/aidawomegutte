@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
      */
     const imageElement = document.getElementById("protectedImage");
     if (imageElement) {
-        const encodedURL = "aW1hZ2VzL0M2MjVEMkM3LUU0OTUtNDgwNS04MDE3LTUyOENDNTIwMkQzN18xXzEwMl9vLmpwZWc=";
+        const encodedURL = "aW1hZ2VzL0thd2Fpc2FuX3dvcmsucG5nCg==";
         imageElement.src = atob(encodedURL);
     }
 
