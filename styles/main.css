@@ -87,6 +87,11 @@ nav ul li a {
     color: #424141;
     text-decoration: none;
     transition: color 0.3s;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
 }
 nav ul li a::after {
     content: '';
